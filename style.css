@@ -4,13 +4,13 @@ html {
     letter-spacing: 0.8px;
     min-height: 100vh;
     color: #d8e9ef;
-    background-image: linear-gradient(-20deg, #025159 0%, #733b36 100%);
+    background-image: linear-gradient(-20deg, #98e27d 0%, #b656ae 100%);
     background-size: cover;
 }
 
 h1 {
     margin: 0 auto 10px auto;
-    color: #d8e9ef;
+    color: #0c5423;
 }
 
 p {
@@ -20,6 +20,7 @@ p {
 .app-message {
     height: 20px;
     margin: 10px auto 20px auto;
+    color: #0c5423
 }
 
 .app-container {
@@ -72,33 +73,35 @@ p {
 }
 
 .circle {
-    border-color: #bf5239;
+    border-color: #880661;
 }
 
 .circle-mask {
-    border-color: #e85a71;
+    border-color: #b3388e;
 }
 
 .app-counter-box {
     font-family: "Droid Sans Mono", monospace;
     font-size: 250%;
     position: relative;
-    top: 50px;
-    color: #d8e9ef;
+    top: 70px;
+    color: #0c5423;
 }
 
 button {
     position: relative;
-    top: 50px;
+    top: 30px;
     font-size: 80%;
     text-transform: uppercase;
     letter-spacing: 1px;
     border: none;
-    background: none;
+    background-color: rgb(244, 92, 165);
+    border-radius: 5px;
     outline: none;
-    color: #d8e9ef;
+    color: #0c5423;
 }
 
 button:hover {
-    color: #90c0d1;
+    color: #af0e7a;
+    background-color: #98e27d;
 }
