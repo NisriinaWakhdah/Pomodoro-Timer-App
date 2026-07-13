@@ -12,7 +12,26 @@ const appTimer = () => {
         let totalSecond = sessionAmount * 60;
 
         const updateSeconds = () => {
+            const minuteDiv = document.querySelector(".minutes");
+            const secondDiv = document.querySelector(".seconds");
 
+            totalSecond--;
+
+            let minutesLeft = Math.floor(totalSecond / 60);
+            let secondsLeft = totalSecond % 60;
+
+            if (secondsLeft < 10) {
+                secondDiv.textContent = "0" + secondsLeft;
+            } else {
+                secondDiv.textContent = secondsLeft;
+            }
+
+            minuteDiv.textContent = `${minutesLeft}`;
+
+            if (minutesLeft === 0 && secondsLeft === 0) {
+                bells.play();
+                clearInterval(myInterval);
+            }
         };
 
         myInterval = setInterval(updateSeconds, 1000);
@@ -20,3 +39,5 @@ const appTimer = () => {
         alert("Session has already started");
     }
 };
+
+startBtn.addEventListener("click", appTimer);
